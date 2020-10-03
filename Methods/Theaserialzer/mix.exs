@@ -10,15 +10,15 @@ defmodule Theaserialzer.MixProject do
       # If it's not a good decision, tell us about that.
       # Anyway, you can directly and simply change directory's name.
       # By the way, in *nix environment, it's no matter between the upper letter and the lower.
-      elixirc_paths: ["lib","Library"],
+      elixirc_paths: ["lib", "Library"],
       start_permanent: Mix.env() == :prod,
       deps: deps(),
-      build_embedded: Mix.env == :prod,
+      build_embedded: Mix.env() == :prod,
       description: description(),
       package: package(),
       deps: deps(),
       name: "Theopse Serializer",
-      source_url: "https://github.com/Theopse/Theopse/Development/blob/Methods/Theaserialzer"
+      source_url: "https://github.com/Theopse/Theopse/tree/Development/Methods/Theaserialzer"
     ]
   end
 
@@ -38,10 +38,18 @@ defmodule Theaserialzer.MixProject do
   end
 
   defp description() do
-
+    "A Serializer From Theopse Organization"
   end
 
   defp package() do
-
+    [
+      organization: "Theopse Organization",
+      licences: ["The Unlicense"],
+      files: ~w(Library priv .formatter.exs mix.exs README* readme* LICENSE*
+								license* CHANGELOG* changelog*),
+      links: %{
+        "GitHub" => "https://github.com/Theopse/Theopse/tree/Development/Methods/Theaserialzer"
+      }
+    ]
   end
 end
